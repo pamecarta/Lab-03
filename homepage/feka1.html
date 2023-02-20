@@ -1,0 +1,351 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<link rel="stylesheet" href="css/estilo.css">
+<script> var prev_x="0";
+function display_desc(x)
+{
+	document.getElementById(x).style.display="block";
+	document.getElementById(prev_x).style.display="none";
+	if(prev_x == x)
+		prev_x='0';
+	else
+		prev_x = x;
+}
+function popupfunction(x)
+{
+	 document.getElementById('popup'+x).style.display='block';
+	 document.getElementById('fade'+x).style.display='block';
+}
+
+function popupclose(x)
+{
+	document.getElementById('popup'+x).style.display='none';
+	document.getElementById('fade'+x).style.display='none';
+}
+
+function addToCart(x) {
+    alert("Item Successfully Added to Cart...");
+    document.getElementById("mycart").innerHTML += "<br>" + x;
+}
+</script>
+</head>
+<body><font face="Arial" color=black>
+<header>
+	<div class="logo" style="background-color:#33475b">
+		<img src="img/Aqua.png" alt="Aqua Logo" width=20%>
+	</div>
+
+	<div class="menu_pop" id="menu_desc" style="display:none">
+    Menu
+	</div>
+
+    <ul>
+        <li class="menu-item">
+			<b><a href="#" class="drp">Valentine's Day </a></b>
+			<div class="menu-content">
+				<a href="javascript:void(0)" onclick="popupfunction('1')" class=linktext>Teddy Bear</a><br>
+				<a href="javascript:void(0)" onclick="popupfunction('2')" class=linktext>Eternal Roses</a><br>
+				<a href="javascript:void(0)" onclick="popupfunction('3')" class=linktext>LED Sign</a><br>
+				<a href="javascript:void(0)" onclick="popupfunction('4')" class=linktext>Heart Bracelet</a>
+				<a href="javascript:void(0)" onclick="popupfunction('5')" class=linktext>Starbucks Gift Card</a>
+			</div>
+        </li>
+
+
+		<li class="menu-item">
+			<b><a href="#" class="drp">Electronics</a></b>
+			<div class="menu-content">
+				<a href="javascript:void(0)" onclick="popupfunction('6')" class=linktext>Dell Computer</a><br>
+				<a href="javascript:void(0)" onclick="popupfunction('7')" class=linktext>Mac Laptop</a><br>
+				<a href="javascript:void(0)" onclick="popupfunction('8')" class=linktext>iPhone 14</a><br>
+				<a href="javascript:void(0)" onclick="popupfunction('9')" class=linktext>Digital Camera</a><br>
+				<a href="javascript:void(0)" onclick="popupfunction('10')" class=linktext>AirPods Pro</a><br>
+			</div>
+		</li>
+
+
+
+    </ul>
+    </header>
+<table border="0" bgcolor="#FFFFFF" align=center width="100%">
+	<tr>
+		<td>
+			<p align=center>
+				<a href="javascript:void(0)" onclick="popupfunction('1')" class=linktext>
+					<img src="img/osito.jpg" width=40% /><br>Giant Teddy Bear
+				</a>
+			</p>
+		</td>
+		<td>
+			<p align=center>
+				<a href="javascript:void(0)" onclick="popupfunction('2')" class=linktext>
+					<img src="img/rosas.jpg" width=50% /><br>Roses That Last a Year
+				</a>
+			</p>
+		</td>
+		<td>
+			<p align=center>
+				<a href="javascript:void(0)" onclick="popupfunction('3')" class=linktext>
+					<img src="img/cor.jpg" width=50% /><br>Heart Shape LED Sign
+				</a>
+			</p>
+		</td>
+		<td>
+			<p align=center>
+				<a href="javascript:void(0)" onclick="popupfunction('4')" class=linktext>
+					<img src="img/hearts.jpg" width=50% /><br>Heart Bracelet
+				</a>
+			</p>
+		</td>
+		<td>
+			<p align=center>
+				<a href="javascript:void(0)" onclick="popupfunction('5')" class=linktext>
+					<img src="img/star.jpg" width=80% /><br>Starbucks Gift Card
+				</a>
+			</p>
+		</td>
+	<tr>
+		<td>
+			<p align=center>
+				<a href="javascript:void(0)" onclick="popupfunction('6')" class=linktext>
+					<img src="img/dell.jpg" width=40% /><br>Dell Computer
+				</a>
+			</p>
+		</td>
+		<td>
+			<p align=center>
+				<a href="javascript:void(0)" onclick="popupfunction('7')" class=linktext>
+					<img src="img/mac.jpg" width=50% /><br>Mac Laptop
+				</a>
+			</p>
+		</td>
+		<td>
+			<p align=center>
+				<a href="javascript:void(0)" onclick="popupfunction('8')" class=linktext>
+					<img src="img/iphone.jpg" width=40% /><br>iPhone 14
+				</a>
+			</p>
+		</td>
+		<td>
+			<p align=center>
+				<a href="javascript:void(0)" onclick="popupfunction('9')" class=linktext>
+					<img src="img/didi.jpg" width=40% /><br>Digital Camera
+				</a>
+			</p>
+		</td>
+		<td>
+			<p align=center>
+				<a href="javascript:void(0)" onclick="popupfunction('10')" class=linktext>
+					<img src="img/air.jpg" width=40% /><br>AirPods Pro
+				</a>
+			</p>
+		</td>
+	</tr>
+
+	<div id="popup1" class="white_content">
+		<center>
+			<br><br>
+			<img src="img/osito.jpg" width=15% /><br><br>
+			<b>DOLDOA Giant Teddy Bear Soft Stuffed Animals Plush Big Bear Toy for Kids, Girlfriend 35.4 inch(Beige)</b><br><br>
+			<b>$35.00</b><br><br>
+			Ratings: 4/5 stars<br>
+			Lowest price in 30 days: $35.79<br>
+			Brand: DOLDOA<br>
+			Toy figure type: Stuffed Toy<br>
+			Color: Beige<br>
+			Material: Cotton<br>
+			Cartoon Character: Animals<br><br>
+			<center><button id="addText" onclick="addToCart('Giant Teddy Bear')"><img src="img/cart.png" width="100%"></button></center><br>
+			<a href="javascript:void(0)" onclick="popupclose('1')" class=linktext id="a1">Close Window</a>
+		</center>
+	</div>
+	<div id="fade1" class="black_content"></div>
+
+	<div id="popup2" class="white_content">
+		<center>
+			<br><br>
+			<img src="img/rosas.jpg" width=30% /><br><br>
+			<b>Eternal Roses</b><br><br>
+			<b>$70.00</b><br><br>
+			Ratings: 5/5 stars<br>
+			Brand: Eterfield<br>
+			Color: Pink<br>
+			Number of Items: 1<br>
+			Item Dimensions (LxWxH): 6.7 x 6.7 x 5.7 inches<br>
+			Style: Classic<br><br>
+			<center><button id="addText" onclick="addToCart('Eternal Roses')"><img src="img/cart.png" width="100%"></button></center><br>
+			<a href="javascript:void(0)" onclick="popupclose('2')" class=linktext id="a1">Close Window</a>
+		</center>
+	</div>
+	<div id="fade2" class="black_content"></div>
+
+	<div id="popup3" class="white_content">
+		<center>
+			<br><br>
+			<img src="img/cor.jpg" width=30% /><br><br>
+			<b>Heart Shape LED Sign</b><br><br>
+			<b>$30.00</b><br><br>
+			Ratings: 4.3/5 stars<br>
+			Brand: EXF<br>
+			Color: Pink<br>
+			Material: Plastic<br>
+			Theme: Love<br><br>
+			<center><button id="addText" onclick="addToCart('Heart Shape LED Sign')"><img src="img/cart.png" width="100%"></button></center><br>
+			<a href="javascript:void(0)" onclick="popupclose('3')" class=linktext id="a1">Close Window</a>
+		</center>
+	</div>
+	<div id="fade3" class="black_content"></div>
+
+	<div id="popup4" class="white_content">
+		<center>
+			<br><br>
+			<img src="img/hearts.jpg" width=50% /><br><br>
+			<b>Heart Bracelet</b><br><br>
+			<b>$28.00</b><br><br>
+			Ratings: 4.8/5 stars<br>
+			Material:	Steel<br>
+			Color:	Silver-tone<br>
+			Brand:	Jstyle<br>
+			Style:	Charm<br>
+			Age range: 	Adult<br><br>
+			<center><button id="addText" onclick="addToCart('Heart Bracelet')"><img src="img/cart.png" width="100%"></button></center><br>
+			<a href="javascript:void(0)" onclick="popupclose('4')" class=linktext id="a1">Close Window</a>
+		</center>
+	</div>
+	<div id="fade4" class="black_content"></div>
+
+	<div id="popup5" class="white_content">
+		<center>
+			<br><br>
+			<img src="img/star.jpg" width=30% /><br><br>
+			<b>Starbucks Gift Card</b><br><br>
+			<b>$10.00, $20.00, $30.00 up to $50.00</b><br><br>
+			Ratings: 5/5 stars<br>
+			Treat this Card like cash.<br> Reload your Card, check your balance and find out how to register and protect your <br>Card balance at participating stores, Starbucks.com/card or 1-800-782-7282.<br>
+			Cannot be redeemed for cash unless required by law.<br>
+			Refunds only provided for unused Cards with the original receipt.<br>
+			This Card does not expire, nor does Starbucks charge fees.<br>Complete terms and conditions available on our website.<br>
+			Use of this Card constitutes acceptance of these terms and conditions.<br><br>
+			<center><button id="addText" onclick="addToCart('Starbucks Gift Card')"><img src="img/cart.png" width="100%"></button></center><br>
+			<a href="javascript:void(0)" onclick="popupclose('5')" class=linktext id="a1">Close Window</a>
+		</center>
+	</div>
+	<div id="fade5" class="black_content"></div>
+
+	<div id="popup6" class="white_content">
+		<center>
+			<br><br>
+			<img src="img/dell.jpg" width=20% /><br><br>
+			<b>Dell Optiplex 9020 Small Form Factor Desktop</b><br><br>
+			<b>$278.00</b><br><br>
+			Ratings: 3.7/5 stars<br>
+			Upto 3.9GHz<br>
+			HD Graphics 4600 4K Support<br>
+			32GB RAM<br>
+			1TB SSD<br>
+			DisplayPort<br>
+			Windows 10 Pro (Renewed)<br>
+			Style: Intel Core i7-4770<br><br>
+			<center><button id="addText" onclick="addToCart('Dell Computer')"><img src="img/cart.png" width="100%"></button></center><br>
+			<a href="javascript:void(0)" onclick="popupclose('6')" class=linktext id="a1">Close Window</a>
+		</center>
+	</div>
+	<div id="fade6" class="black_content"></div>
+
+	<div id="popup7" class="white_content">
+		<center>
+			<br><br>
+			<img src="img/mac.jpg" width=30% /><br><br>
+			<b>MacBook Air Laptop </b><br><br>
+			<b>$225.00</b><br><br>
+			Ratings: 4/5 stars<br>
+			Brand:	Apple<br>
+			Series:	MJVM2LL/A-RB<br>
+			Screen Size:	11.6 Inches<br>
+			Color:	Silver<br>
+			Hard Disk Size:	128 GB<br>
+			CPU Model:	Core i5<br>
+			Ram Memory Installed Size:	4 GB<br>
+			Operating System:	OS X 10.10 Yosemite<br>
+			Special Feature:	Intel Core i5 Dual-Core 1.6GHz up to 2.7GHz<br>
+			Card Description:	Integrated Intel HD Graphics 6000, Integrated<br><br>
+			<center><button id="addText" onclick="addToCart('MacBook Air')"><img src="img/cart.png" width="100%"></button></center><br>
+			<a href="javascript:void(0)" onclick="popupclose('7')" class=linktext id="a1">Close Window</a>
+		</center>
+	</div>
+	<div id="fade7" class="black_content"></div>
+
+	<div id="popup8" class="white_content">
+		<center>
+			<br><br>
+			<img src="img/iphone.jpg" width=15% /><br><br>
+			<b>Apple iPhone 14, 128GB, Midnight - Unlocked (Renewed)</b><br><br>
+			<b>$681.99</b><br><br>
+			Ratings: 5/5 stars<br>
+			Brand:	Apple<br>
+			Model Name:	iPhone 14<br>
+			Wireless Carrier:	Unlocked<br>
+			Cellular Technology:	5G<br>
+			Memory Storage Capacity:	128 GB<br>
+			Connectivity technologies:	Wi-Fi<br>
+			Color:	Midnight<br>
+			Connector Type:	Lightning<br>
+			Formfactor:	Slate<br>
+			Year:	2022<br><br>
+			<center><button id="addText" onclick="addToCart('iPhone 14')"><img src="img/cart.png" width="100%"></button></center><br>
+			<a href="javascript:void(0)" onclick="popupclose('8')" class=linktext id="a1">Close Window</a>
+		</center>
+	</div>
+	<div id="fade8" class="black_content"></div>
+
+	<div id="popup9" class="white_content">
+		<center>
+			<br><br>
+			<img src="img/didi.jpg" width=15% /><br><br>
+			<b>Digital Camera, FHD 1080P Digital Camera</b><br><br>
+			<b>$50.99</b><br><br>
+			Ratings: 2.5/5 stars<br>
+			Brand:	VAHOIALD<br>
+			Form Factor:	Compact<br>
+			Effective Still Resolution:	44 MP<br>
+			Color:	Black<br>
+			Connectivity Technology:	USB<br>
+			Screen Size:	2.4 Inches<br>
+			Flash Memory Type:	Micro SD/Micro SDHC/Micro SDXC<br>
+			Video Capture Resolution:	1080p<br>
+			Lens Type:	Fixed Lens<br><br>
+			<center><button id="addText" onclick="addToCart('Digital Camera')"><img src="img/cart.png" width="100%"></button></center><br>
+			<a href="javascript:void(0)" onclick="popupclose('9')" class=linktext id="a1">Close Window</a>
+		</center>
+	</div>
+	<div id="fade9" class="black_content"></div>
+
+	<div id="popup10" class="white_content">
+		<center>
+			<br><br>
+			<img src="img/air.jpg" width=15% /><br><br>
+			<b>Apple AirPods Pro (2nd Generation) Wireless Earbuds</b><br><br>
+			<b>$199.99</b><br><br>
+			Ratings: 4.2/5 stars<br>
+			Brand:	Apple<br>
+			Model Name:	AirPods Pro<br>
+			Color:	White<br>
+			Form Factor:	In Ear<br>
+			Connectivity Technology:	Wireless<br><br>
+			<center><button id="addText" onclick="addToCart('AirPods Pro')"><img src="img/cart.png" width="100%"></button></center><br>
+			<a href="javascript:void(0)" onclick="popupclose('10')" class=linktext id="a1">Close Window</a>
+		</center>
+	</div>
+	<div id="fade10" class="black_content"></div>
+
+</table>
+
+<div class="cart1" id="mycart" align="right">
+	<div id="mycart" class="cartcount"> </div>
+	<img src="img/icon.png" bgcolor="rgb(251,209,58)" sizes="(max-width: 300px) 200px,300px"/>
+</div>
+
+</font>
+</body>
+</html>
